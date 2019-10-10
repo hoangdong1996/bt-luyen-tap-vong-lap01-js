@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi xuất ngân hàng</title>
+</head>
+<p>Nhập số tiền vay</p>
+<input type="text" id="money" >
+<p>Nhập số tháng vay</p>
+<input type="text" id="month" >
+<p>Chọn lãi xuất hàng tháng %</p>
+<input type="text" id="interestRate">
+<p id="display"></p>
+<input type="button" onclick="setInterestRate()" value="Tính tiền">
+<body>
+<script>
+    function setInterestRate() {
+        let money = parseFloat(document.getElementById("money").value);
+        let month = parseInt(document.getElementById("month").value);
+        let interestRate = parseFloat(document.getElementById("interestRate").value);
+        let result = money * Math.pow(1 + interestRate/100, month);
+        document.getElementById("display").innerHTML = result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonaci</title>
+</head>
+<body>
+<p>Nhập số số trong dãy Fibonaci cần in</p>
+<input type="text" id="numFibonaci" oninput="setFibonaci()" >
+<p id="displayFibonaci"></p>
+<script>
+    function isFibonaci(number) {
+        let a = 1;
+        let b = 0;
+        let temp;
+        while (number >= 0) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            number--;
+        }
+        return b;
+    }
+    function setFibonaci() {
+        let count = parseInt(document.getElementById("numFibonaci").value);
+        let number = 0 ;
+        while (number < count) {
+            document.write(isFibonaci(number) + " ");
+            //document.getElementById("displayFibonaci").innerHTML = isFibonaci(number) + " " ;
+            number++;
+        }
+    }
+</script>
+</body>
+</html>

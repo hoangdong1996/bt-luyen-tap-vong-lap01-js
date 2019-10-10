@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình tam giác</title>
+</head>
+<body>
+<script>
+    function printTriangles1() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+    }
+    function printTriangles2() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 5; j >= i; j-- ) {
+                document.write(" * ");
+            }
+            document.write("<br>");
+        }
+    }
+    function printTriangles3() {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 2*5; j++) {
+                if (j >= (5 - 1 - i) && j < 5) {
+                    document.write("&nbsp*&nbsp");
+                } else {
+                    document.write("&nbsp&nbsp&nbsp&nbsp")
+                }
+            }
+        document.write("<br>");
+        }
+    }
+    printTriangles2();
+    printTriangles1();
+    printTriangles3();
+</script>
+</body>
+</html>
